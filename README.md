@@ -28,7 +28,7 @@
     <li>dispatch :: change redux store value</li>
   </ul>
   <p>example</p>
-```js
+  <pre></pre>
 // store reducer
 const counterReducer = (state = { counter: 0 }, action) => {
   if (action.type == "increment") {
