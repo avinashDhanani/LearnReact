@@ -17,3 +17,47 @@
     <li>useContext, fetch api</li>
   </ul>
 </div>
+
+<h1>10-redux-core</h1>
+<div>
+  <p>Desc for this module</p>
+  <ul>
+    <li>createStore :: create redux store</li>
+    <li>reducer funtion :: to change redux store data</li>
+    <li>subscriber :: subscribe redux store.</li>
+    <li>dispatch :: change redux store value</li>
+  </ul>
+  <p>example</p>
+  ```
+// store reducer
+const counterReducer = (state = { counter: 0 }, action) => {
+  if (action.type == "increment") {
+    return {
+      counter: state.counter + 1,
+    };
+  }
+  if (action.type == "decrement") {
+    return {
+      counter: state.counter - 1,
+    };
+  }
+  return state;
+};
+
+// create store
+const store = redux.createStore(counterReducer);
+
+const counterSubscriber = () => {
+const latestState = store.getState();
+console.log("latestState : ", latestState);
+};
+
+// store subscriber
+store.subscribe(counterSubscriber);
+
+// dispatch :: change store data
+store.dispatch({ type: "increment" });
+
+```
+</div>
+```
