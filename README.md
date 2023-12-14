@@ -48,8 +48,8 @@ const counterReducer = (state = { counter: 0 }, action) => {
 const store = redux.createStore(counterReducer);
 
 const counterSubscriber = () => {
-const latestState = store.getState();
-console.log("latestState : ", latestState);
+  const latestState = store.getState();
+  console.log("latestState : ", latestState);
 };
 
 // store subscriber
@@ -60,4 +60,3 @@ store.dispatch({ type: "increment" });
 
 ```
 </div>
-```
