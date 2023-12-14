@@ -28,35 +28,35 @@
     <li>dispatch :: change redux store value</li>
   </ul>
   <p>example</p>
-  <pre></pre>
-// store reducer
-const counterReducer = (state = { counter: 0 }, action) => {
-  if (action.type == "increment") {
-    return {
-      counter: state.counter + 1,
-    };
-  }
-  if (action.type == "decrement") {
-    return {
-      counter: state.counter - 1,
-    };
-  }
-  return state;
-};
+  <div
+    class="highlight highlight-source-js notranslate position-relative overflow-auto"
+    dir="auto"
+  >
+    <pre>
+      // store reducer
+      const counterReducer = (state = { counter: 0 }, action) => {
+        if (action.type == "increment") {
+          return {
+            counter: state.counter + 1,
+          };
+        }
+        return state;
+      };
 
-// create store
-const store = redux.createStore(counterReducer);
+      // create store
+      const store = redux.createStore(counterReducer);
 
-const counterSubscriber = () => {
-  const latestState = store.getState();
-  console.log("latestState : ", latestState);
-};
+      const counterSubscriber = () => {
+        const latestState = store.getState();
+        console.log("latestState : ", latestState);
+      };
 
-// store subscriber
-store.subscribe(counterSubscriber);
+      // store subscriber
+      store.subscribe(counterSubscriber);
 
-// dispatch :: change store data
-store.dispatch({ type: "increment" });
+      // dispatch :: change store data
+      store.dispatch({ type: "increment" });
+    </pre>
 
-```
+  </div>
 </div>
