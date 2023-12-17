@@ -58,5 +58,13 @@
       store.dispatch({ type: "increment" });
     </pre>
 
-  </div>  
+  </div> 
+
+  <h1>11-redux-toolkit</h1>
+  <div>
+    <p>Redux toolkit</p>
+    <ul>
+      <li>Redux Toolkit provides several advantages over traditional Redux: It is easier to set up and requires fewer dependencies. Reduces boilerplate code by allowing the creation of a single file known as "slice" that combines actions and reducers.</li>
+    </ul>
+  </div>
 </div>
