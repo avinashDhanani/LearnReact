@@ -58,5 +58,5 @@
       store.dispatch({ type: "increment" });
     </pre>
 
-  </div>
+  </div>  
 </div>
